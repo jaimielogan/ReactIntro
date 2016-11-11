@@ -5,7 +5,6 @@ React set up
 3. mkdir src
 4. touch src/index.jsx
 5. touch webpack.config.js
-  1.
   ```javascript
   module.exports = {
       entry: [‘./src/index.jsx’],
@@ -13,6 +12,7 @@ React set up
         filename: "bundle.js",
         path: "./"
       },
+      devtool: "source-map",
       module: {
         loaders: [
           {
@@ -31,7 +31,6 @@ React set up
 7. git init
 8. echo node_modules > .gitignore
 9. In package.json, add the "build" piece
-  1.
   ```javascript
   "scripts": {
     "build": "webpack --config“,
